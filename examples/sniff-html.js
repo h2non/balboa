@@ -4,7 +4,7 @@ const proxy = balboa()
 proxy
   .route
   .transformResponseBody(function (req, res, next) {
-    if (/html/i.test(res.getHeader('content-type')) ===  false) return next()
+    if (/html/i.test(res.getHeader('content-type')) === false) return next()
 
     var body = res.body.toString()
     // Compose the new body
