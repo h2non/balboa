@@ -1,0 +1,38 @@
+{
+  "name": "balboa",
+  "version": "0.1.0",
+  "description": "Simple, fully programmatic, HTTP/S forward proxy",
+  "repository": "h2non/balboa",
+  "author": "Tomas Aparicio",
+  "license": "MIT",
+  "engines": {
+    "node": ">= 0.12"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --timeout 5000 --bail --reporter spec --ui tdd test/*.js"
+  },
+  "keywords": [
+    "http",
+    "proxy",
+    "http-proxy",
+    "forward",
+    "programmatic",
+    "sniffer",
+    "intercept",
+    "https",
+    "modify",
+    "monitor",
+    "logger"
+  ],
+  "dependencies": {
+    "morgan": "^1.6.1",
+    "rocky": "^0.4.2",
+    "yargs": "^3.29.0"
+  },
+  "devDependencies": {
+    "chai": "^3.0.0",
+    "fw": "^0.1.2",
+    "mocha": "^2.2.5",
+    "request": "^2.65.0"
+  }
+}

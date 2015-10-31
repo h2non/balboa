@@ -1,0 +1,71 @@
+#!/usr/bin/env node
+
+const fs   = require('fs')
+const port = 3000
+
+const opts = require('yargs')
+  .usage('Start balboa HTTP proxy server\nUsage: $0 [options]')
+  .example('$0 -c rocky.toml \\\n -f http://127.0.0.1:9000 \\\n -r http://127.0.0.1', '')
+  .help('help')
+  .alias('help', 'h')
+  .version(require('../package.json').version)
+  .alias('v', 'version')
+  .options({
+    port: {
+      alias: 'p',
+      description: 'Proxy server port',
+    },
+    sslport: {
+      alias: 's',
+      description: 'Proxy SSL server port',
+    },
+    key: {
+      alias: 'k',
+      description: 'Path to SSL key file'
+    },
+    cert: {
+      alias: 'e',
+      description: 'Path to SSL certificate file'
+    },
+    ca: {
+      alias: 'a',
+      description: 'CA certificate file'
+    },
+    secure: {
+      alias: 's',
+      description: 'Enable SSL certification validation',
+      type: 'boolean'
+    },
+    mute: {
+      alias: 'm',
+      description: 'Disable HTTP log in stdout',
+      type: 'boolean'
+    },
+    debug: {
+      alias: 'd',
+      description: 'Enable debug mode',
+      type: 'boolean'
+    }
+  })
+  .argv
+
+if (opts.cert && opts.key) {
+  opts.ssl = {
+    cert: fs.readFileSync(opts.cert),
+    key: fs.readFileSync(opts.key)
+  }
+  if (opts.ca) {
+    opts.ssl.ca = fs.readFileSync(opts.ca)
+  }
+}
+
+if (opts.debug) {
+  process.env.DEBUG = '*'
+}
+
+opts.port = +opts.port || +process.env.PORT || port
+
+// Start the proxy
+require('..')(opts)
+
+if (opts.debug) console.log('proxy server listening on port:', opts.port)
