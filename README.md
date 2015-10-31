@@ -4,11 +4,11 @@ Simple, programmatic and hackable node.js HTTP forward proxy built-on-top of [ro
 
 Not designed for serious things, only for playground/development purposes.
 
-<img src="http://cdn2.hubspot.net/hub/26878/file-13610973-png/images/forward_proxy-3.png" width="450" />
+<img src="http://cdn2.hubspot.net/hub/26878/file-13610973-png/images/forward_proxy-3.png" width="500" />
 
 ## Features
 
-- Dead simple setup
+- Dead simple to set up
 - Acts like a traditional HTTP forward proxy (e.g: Squid)
 - Supports HTTP interceptors to modify request/response payloads
 - Programmatically hackable (see [rocky API](https://github.com/h2non/rocky#programmatic-api))
@@ -58,7 +58,7 @@ proxy.listen(8080)
 console.log('Proxy server listening on port:', 8080)
 ```
 
-### balboa([ opts ]) => [proxy](#balboarocky)
+### balboa([ opts ]) => [rocky](#balboarocky)
 
 Creates a new HTTP or HTTPS proxy.
 
@@ -66,11 +66,11 @@ Creates a new HTTP or HTTPS proxy.
 
 See [rocky docs](https://github.com/h2non/rocky#configuration) for full supported options.
 
-### balboa.proxy([ opts ]) => [proxy](#balboarocky)
+### balboa.proxy([ opts ]) => [rocky](#balboarocky)
 
 Creates an HTTP proxy.
 
-### balboa.proxySSL(opts) => [proxy](#balboarocky)
+### balboa.proxySSL(opts) => [rocky](#balboarocky)
 
 Creates a SSL proxy with the given options.
 See an example [here](https://github.com/h2non/balboa/blob/master/examples/https.js).
