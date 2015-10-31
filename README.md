@@ -1,10 +1,10 @@
-# balboa
+# balboa [![Build Status](https://api.travis-ci.org/h2non/balboa.svg?branch=master&style=flat)](https://travis-ci.org/h2non/balboa) [![NPM](https://img.shields.io/npm/v/balboa.svg)](https://www.npmjs.org/package/balboa)
 
-Simple node.js powered HTTP forward proxy built-on-top of [rocky](https://github.com/h2non/rocky).
+Simple, programmatic and hackable node.js HTTP forward proxy built-on-top of [rocky](https://github.com/h2non/rocky).
 
 Not designed for serious things, only for playground/development purposes.
 
-<img src="http://cdn2.hubspot.net/hub/26878/file-13610973-png/images/forward_proxy-3.png" width="380" />
+<img src="http://cdn2.hubspot.net/hub/26878/file-13610973-png/images/forward_proxy-3.png" width="450" />
 
 ## Features
 
