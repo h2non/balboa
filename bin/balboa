@@ -15,10 +15,6 @@ const opts = require('yargs')
       alias: 'p',
       description: 'Proxy server port',
     },
-    sslport: {
-      alias: 's',
-      description: 'Proxy SSL server port',
-    },
     key: {
       alias: 'k',
       description: 'Path to SSL key file'
