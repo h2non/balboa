@@ -31,9 +31,15 @@ npm install balboa --save
 
 ## Usage
 
+Start the forward proxy:
 ```bash
 balboa -p 8080
 ```
+
+Then you can configure your web browser to use `balboa` as proxy (Firefox proxy settings below):
+<img src="http://i.imgur.com/eoC73LW.png" />
+
+Finally, try browsing [some site](http://www.nytimes.com).
 
 ## Programmatic API
 
