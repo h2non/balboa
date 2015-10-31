@@ -24,7 +24,7 @@ Not designed for serious things, only for playground/development purposes.
 npm install -g balboa
 ```
 
-For programmatic usage only install it as tree dependency:
+For programmatic usage only install it in your dependency tree:
 ```bash
 npm install balboa --save
 ```
