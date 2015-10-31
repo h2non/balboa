@@ -1,6 +1,6 @@
 {
   "name": "balboa",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Simple, fully programmatic, HTTP/S forward proxy",
   "repository": "h2non/balboa",
   "author": "Tomas Aparicio",
