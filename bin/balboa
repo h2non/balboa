@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const fs   = require('fs')
-const port = 3000
+const port = 3128
 
 const opts = require('yargs')
   .usage('Start balboa HTTP proxy server\nUsage: $0 [options]')
