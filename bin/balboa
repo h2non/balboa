@@ -27,9 +27,9 @@ const opts = require('yargs')
       alias: 'a',
       description: 'CA certificate file'
     },
-    secure: {
+    insecure: {
       alias: 's',
-      description: 'Enable SSL certification validation',
+      description: 'Disable SSL certification validation',
       type: 'boolean'
     },
     mute: {
@@ -53,6 +53,10 @@ if (opts.cert && opts.key) {
   if (opts.ca) {
     opts.ssl.ca = fs.readFileSync(opts.ca)
   }
+}
+
+if (opts.insecure) {
+  opts.secure = false
 }
 
 if (opts.debug) {
